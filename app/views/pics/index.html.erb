@@ -2,4 +2,6 @@
   <% @pics.each do |pic| %>
     <h3><%= link_to pic.title, pic %></h3>
   <% end %>
+
+  <%= link_to "Post", new_pic_path%>
 </div>
