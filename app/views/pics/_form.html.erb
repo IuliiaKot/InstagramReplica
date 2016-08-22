@@ -1,0 +1,26 @@
+<%= form_for @pic do |f| %>
+  <div class="">
+    <% if @pic.errors.any? %>
+      <div #="errors">
+        <h3>pluralize(@pic.errors.count, 'error') </h3>
+        <ul>
+          <% @pic.erros.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="from-group">
+    <%= f.label :title, class: 'title' %>
+    <%= f.text_area :title, class: 'form-contol' %>
+  </div>
+
+  <div class="rom-group">
+    <%= f.label :description, class: 'title' %>
+    <%= f.text_field :title, class: 'form-contol' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-info'%>
+<% end %>
