@@ -2,9 +2,13 @@
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h1>Edits Pic</h1>
+        <h1>Edit Pic</h1>
       </div>
       <div class="panel-body">
+        <div class="current_image">
+          <strong class="center">Current</strong><br>
+          <%= image_tag @pic.image.url(:medium)%>
+        </div>
         <%= render 'form'%>
       </div>
     </div>
