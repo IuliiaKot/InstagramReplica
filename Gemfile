@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'paperclip', '~> 4.2.0'
+gem 'masonry-rails', '~> 0.2.4'
 
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'

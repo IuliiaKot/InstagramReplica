@@ -1,12 +1,32 @@
-<div class="">
-  <%= image_tag @pic.image.url %>
-  <h1><%=  @pic.title %></h1>
-  <p>
-    <%=  @pic.description%>
-  </p>
-  <span>Picture by <%= @pic.user.email%></span><br>
+<div id="pic-show" class="row">
+  <div class="col-md-6 col-offset-3">
+      <div class="panel panel-deafult">
+        <div class="panel heading pic_image">
+          <%= image_tag @pic.image.url %>
+        </div>
+        <div class="panel-body">
+          <h1><%=  @pic.title %></h1>
+          <p><%=  @pic.description%></p>
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-md-6">
+              <span>Picture by <%= @pic.user.email%></span><br>
+            </div>
 
-  <%= link_to 'Back', root_path %>
-  <%= link_to 'Edit', edit_pic_path%>
-  <%= link_to 'Delete', pic_path, method: :delete%>
+            <div class="col-md-6">
+              <div class="btn-group pull-right">
+                <%if user_signed_in?%>
+                  <%= link_to 'Edit', edit_pic_path, class: 'btn btn-info'%>
+                  <%= link_to 'Delete', pic_path, method: :delete,  class: 'btn btn-danger'%>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
 </div>
